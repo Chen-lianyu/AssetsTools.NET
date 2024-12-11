@@ -51,17 +51,17 @@ namespace AssetsTools.NET
         /// <param name="version">The version of the file.</param>
         public void Read(AssetsFileReader reader, uint version)
         {
-            Version = reader.ReadUInt16();
-            Level = reader.ReadByte();
-            TypeFlags = (TypeTreeNodeFlags)reader.ReadByte();
-            TypeStrOffset = reader.ReadUInt32();
-            NameStrOffset = reader.ReadUInt32();
-            ByteSize = reader.ReadInt32();
-            Index = reader.ReadUInt32();
-            MetaFlags = reader.ReadUInt32();
+            Version = reader.ReadUInt16();2
+            Level = reader.ReadByte();0
+            TypeFlags = (TypeTreeNodeFlags)reader.ReadByte();0
+            TypeStrOffset = reader.ReadUInt32();2147484522
+            NameStrOffset = reader.ReadUInt32();2147483703
+            ByteSize = reader.ReadInt32();-1
+            Index = reader.ReadUInt32();0
+            MetaFlags = reader.ReadUInt32();32768
             if (version >= 0x12)
             {
-                RefTypeHash = reader.ReadUInt64();
+                RefTypeHash = reader.ReadUInt64();0
             }
         }
 
