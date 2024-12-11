@@ -64,15 +64,15 @@ namespace AssetsTools.NET
         /// <param name="isRefType">Is this type part of the ref type list?</param>
         public void Read(AssetsFileReader reader, uint version, bool hasTypeTree, bool isRefType)
         {
-            TypeId = reader.ReadInt32();
+            TypeId = reader.ReadInt32();28
             if (version >= 16)
             {
-                IsStrippedType = reader.ReadBoolean();
+                IsStrippedType = reader.ReadBoolean();0
             }
 
             if (version >= 17)
             {
-                ScriptTypeIndex = reader.ReadUInt16();
+                ScriptTypeIndex = reader.ReadUInt16();0xffff
             }
             else
             {
@@ -91,8 +91,8 @@ namespace AssetsTools.NET
 
             if (hasTypeTree)
             {
-                int typeTreeNodeCount = reader.ReadInt32();
-                int stringBufferLen = reader.ReadInt32();
+                int typeTreeNodeCount = reader.ReadInt32();44
+                int stringBufferLen = reader.ReadInt32();468
                 Nodes = new List<TypeTreeNode>(typeTreeNodeCount);
                 for (int i = 0; i < typeTreeNodeCount; i++)
                 {
